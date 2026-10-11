@@ -1,0 +1,78 @@
+{
+ "matchups": [
+  {
+   "a": "nordictrack-t-6-5-s",
+   "b": "proform-carbon-tl",
+   "intro": "Same parent company, same iFIT platform, similar price range: the NordicTrack T 6.5 S and ProForm Carbon TL are the two folding running treadmills most shoppers end up choosing between.",
+   "bottom_line": "Pick the NordicTrack if you want the wider 20 in belt and the longest owner track record; pick the ProForm if you'd rather save 37 lb and a little floor space for an 18 in belt.",
+   "choose_a": "You're a bigger runner who wants the widest belt and a machine with almost 30,000 ratings behind it.",
+   "choose_b": "You want the same running core in a lighter frame that's easier to fold and move.",
+   "faq": [
+    [
+     "Do both need iFIT?",
+     "Both run manual workouts without it. Guided and auto-adjusting workouts need an iFIT membership on either."
+    ],
+    [
+     "Which is quieter?",
+     "Owners describe both as reasonably quiet; neither brand publishes a dB figure."
+    ]
+   ]
+  },
+  {
+   "a": "proform-carbon-tl",
+   "b": "proform-carbon-tlx",
+   "intro": "ProForm's Carbon TL and TLX look alike, but the TLX is a step up for runners: longer belt, bigger motor, more speed and incline.",
+   "bottom_line": "Runners over about 5'10\" or anyone doing sprints should get the TLX's 60 in belt; walkers and joggers will be happy with the lighter, smaller TL.",
+   "choose_a": "You jog or run at moderate pace and want a lighter, smaller machine.",
+   "choose_b": "You're tall, run fast intervals, or want 12 mph and 12% incline."
+  },
+  {
+   "a": "sunny-auto-incline-fully-assembled",
+   "b": "sunny-smart-wifi-auto-incline",
+   "intro": "Two Sunny treadmills with motorized incline and free apps — one arrives fully assembled with a wide belt, the other folds upright and connects over Wi-Fi.",
+   "bottom_line": "The fully assembled SF-T723030 is the better treadmill: wider belt, steeper incline, faster top speed. Choose the Active 400 only if it must fold upright into a small room.",
+   "choose_a": "You want zero assembly, a wide 20 in belt and incline to 15%.",
+   "choose_b": "Floor space is tight and you want an upright fold plus Wi-Fi app workouts."
+  },
+  {
+   "a": "trailviber-x01",
+   "b": "urevo-cyberpad",
+   "intro": "Two under-desk pads with motorized incline: TRAILVIBER's X01 and UREVO's design-award CyberPad.",
+   "bottom_line": "The X01 wins on capacity, belt room, warranty and price range; the CyberPad wins on quietness and a slightly steeper 14% incline.",
+   "choose_a": "You want the most capable motorized-incline pad for the money, a 450 lb rating and a 3-year warranty.",
+   "choose_b": "You walk on calls in a quiet office and want the quietest motor and 14% incline."
+  },
+  {
+   "a": "trailviber-x01",
+   "b": "merach-ultrawalk-w60",
+   "intro": "Two heavy-duty walking pads with motorized incline and roomy 16.5 in decks.",
+   "bottom_line": "The X01 is lighter, rated higher (450 lb), better reviewed and warrantied longer. The W60's extra length helps very tall walkers, but its track record is short.",
+   "choose_a": "You want the best-reviewed motorized incline pad with the biggest weight rating.",
+   "choose_b": "You're very tall and want MERACH's 41.3 in deck and transparent motor specs."
+  },
+  {
+   "a": "urevo-smart-incline-pad",
+   "b": "walkingpad-p1",
+   "intro": "The best-rated budget incline pad against the original fold-in-half walking pad.",
+   "bottom_line": "The UREVO does more for less: 11% incline, jogging to 6.2 mph and a higher weight rating. The P1 is better built and folds smaller, but it's walking-only and flat.",
+   "choose_a": "You want incline, the option to jog and a lower price range.",
+   "choose_b": "You value build quality, a wide belt and the smallest folded size for a closet."
+  },
+  {
+   "a": "ypoo-16-incline",
+   "b": "cursor-fitness-x5f",
+   "intro": "Two cheap 16% incline pads with something to hold: YPOO's side handles versus CURSOR's long side rails.",
+   "bottom_line": "The YPOO is the safer buy — sold by Amazon, better rated and it folds flat. Choose the CURSOR X5F for its longer rails and higher 330 lb rating.",
+   "choose_a": "You want handles and fold-flat storage under a bed, with easy Amazon returns.",
+   "choose_b": "You want full-length rails for balance or rehab and a higher weight rating."
+  },
+  {
+   "a": "yagud-walking-pad",
+   "b": "viamotion-incline-walking-pad",
+   "intro": "Amazon's two biggest-selling budget pads, both with a folding handle and a gentle 4° tilt.",
+   "bottom_line": "Very close. Yagud publishes a belt size (37.4 × 15.4 in) and stores flatter; Viamotion has a higher 265 lb rating. Both are walking-only.",
+   "choose_a": "You want a published, slightly longer belt and the flattest storage.",
+   "choose_b": "You need the higher 265 lb rating and prefer storing it upright."
+  }
+ ]
+}

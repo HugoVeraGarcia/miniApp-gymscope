@@ -1,0 +1,361 @@
+{
+ "name": "GymScope",
+ "logo": [
+  "Gym",
+  "Scope"
+ ],
+ "tagline": "Treadmill & walking pad reviews and side-by-side comparisons",
+ "footer_blurb": "Independent home treadmill and walking pad reviews with spec-by-spec comparisons. We read the spec sheets and the owner reviews so you don't have to.",
+ "base_url": "https://homegym.specversus.com",
+ "lang": "en",
+ "year": 2026,
+ "show_prices": false,
+ "affiliate_tag": "gymscope00-20",
+ "contact_email": "soporte.microtools.lat@gmail.com",
+ "categories": [
+  {
+   "slug": "walking-pads",
+   "name": "Walking pads",
+   "short": "Walking pads",
+   "h1": "Best walking pads",
+   "icon": "layers",
+   "rule": "tag:walking-pad",
+   "guide": "best-walking-pad",
+   "intro": "Compact, low-profile treadmills built mostly for walking. Most slide under a sofa or bed, and many work under a standing desk."
+  },
+  {
+   "slug": "under-desk",
+   "name": "Under-desk treadmills",
+   "short": "Under-desk",
+   "h1": "Best under-desk treadmills",
+   "icon": "user",
+   "rule": "tag:under-desk",
+   "guide": "best-walking-pad",
+   "intro": "Pads with no fixed console or rails, so they fit under a standing desk. Quiet motors and remote or app control matter most here."
+  },
+  {
+   "slug": "incline",
+   "name": "Incline (10%+)",
+   "short": "Incline 10%+",
+   "h1": "Best incline treadmills and walking pads",
+   "icon": "mountain",
+   "rule": "incline_max_pct>=10",
+   "guide": "best-incline-walking-pad",
+   "intro": "Models that tilt to 10% or more for hill walking — the most effective way to raise effort without running."
+  },
+  {
+   "slug": "auto-incline",
+   "name": "Motorized incline",
+   "short": "Auto incline",
+   "h1": "Best treadmills with auto incline",
+   "icon": "bolt",
+   "rule": "spec:auto_incline",
+   "guide": "best-incline-walking-pad",
+   "intro": "Incline that changes with a button mid-workout, instead of stopping to move a block or pin."
+  },
+  {
+   "slug": "running",
+   "name": "For running",
+   "short": "Running",
+   "h1": "Best treadmills for running at home",
+   "icon": "feather",
+   "rule": "tag:running",
+   "guide": "best-treadmill-for-running",
+   "intro": "Machines that reach 7.5 mph or more on a belt long enough for a running stride."
+  },
+  {
+   "slug": "with-handrails",
+   "name": "With handrails",
+   "short": "Handrails",
+   "h1": "Best walking pads and treadmills with handrails",
+   "icon": "kid",
+   "rule": "tag:handrail",
+   "guide": "best-treadmill-for-home",
+   "intro": "Something to hold: full consoles, side rails or folding handlebars for balance, beginners and rehab walking."
+  },
+  {
+   "slug": "heavy-duty",
+   "name": "Heavy-duty (350 lb+)",
+   "short": "350 lb+",
+   "h1": "Best treadmills for heavy people (350 lb+)",
+   "icon": "dock",
+   "rule": "max_user_lb>=350",
+   "guide": "best-treadmill-for-heavy-people",
+   "intro": "Models rated for 350 lb or more. Buy one rated well above your weight: motors and belts last longer that way."
+  },
+  {
+   "slug": "budget",
+   "name": "Under $150",
+   "short": "Under $150",
+   "h1": "Best treadmills and walking pads under $150",
+   "icon": "tag",
+   "rule": "price<=150",
+   "guide": "best-treadmill-under-300",
+   "intro": "The cheapest models we'd consider. Expect walking speeds, simple consoles and 1-year warranties."
+  }
+ ],
+ "guides": [
+  {
+   "slug": "best-treadmill-for-home",
+   "title": "Best Treadmill for Home (2026)",
+   "h1": "The best treadmills for home in 2026",
+   "description": "The best home treadmills and walking pads on Amazon right now, ranked by our editor score across motor, incline, belt room, sturdiness, storage, features and value.",
+   "rank_by": "overall",
+   "filter": null,
+   "limit": 5,
+   "intro": [
+    "The right treadmill depends on three things: whether you'll walk or run, how long your stride is, and where the machine will live. A walking pad that slides under the sofa and a 200 lb running treadmill are both 'treadmills', but they solve completely different problems.",
+    "We rank every model by our editor score, which weighs value most, then motor, incline, belt room and sturdiness, then storage and features. Use the fit finder to check any pick against your height, weight and space."
+   ],
+   "criteria": [
+    [
+     "Walk or run?",
+     "Walking pads top out around 4 mph; running needs 8+ mph, a 50–60 in belt and a heavier frame. Buy for the fastest thing you'll realistically do."
+    ],
+    [
+     "Belt length",
+     "Walking is comfortable on 36–40 in; jogging needs about 48 in and running 55–60 in, more if you're over 6 ft."
+    ],
+    [
+     "Weight limit",
+     "Choose a model rated at least 15–20% above your weight. Running near the limit wears the motor and belt faster."
+    ],
+    [
+     "Incline",
+     "Motorized incline changes with a button; manual incline means stopping to change a block or pin."
+    ],
+    [
+     "Subscriptions",
+     "NordicTrack and ProForm put guided and auto-adjusting workouts behind an iFIT membership. Sunny, UREVO and most pads use free apps."
+    ]
+   ],
+   "faq": [
+    [
+     "Is a walking pad as good as a treadmill?",
+     "For walking, yes — and it's far easier to store. For jogging or running you need the speed, belt length and frame of a full treadmill."
+    ],
+    [
+     "How much should I spend?",
+     "Good walking pads sit in the $150–$300 range. Full folding treadmills with motorized incline start around $400 and running-grade machines around $600–$1,000."
+    ],
+    [
+     "Does motor horsepower matter?",
+     "Less than the marketing suggests: brands quote peak or continuous figures inconsistently. For walking, 2–2.5 HP is plenty; for regular running look for 2.5–3 HP and a heavier frame."
+    ]
+   ]
+  },
+  {
+   "slug": "best-walking-pad",
+   "title": "Best Walking Pad (2026)",
+   "h1": "The best walking pads and under-desk treadmills in 2026",
+   "description": "The best walking pads for walking at a standing desk or at home, ranked on storage, quietness, belt room, incline and value.",
+   "rank_by": "desk",
+   "filter": "tag:under-desk",
+   "limit": 5,
+   "intro": [
+    "A walking pad is a treadmill without the console: low, light and quiet enough to walk at a standing desk or while watching TV, then slide under a sofa or bed.",
+    "This ranking favors what matters for daily desk walking — easy storage, sturdiness, belt room and value — over top speed."
+   ],
+   "criteria": [
+    [
+     "Height when stored",
+     "Most pads are 4–6 in tall. Measure under your sofa or bed before you buy."
+    ],
+    [
+     "Belt width",
+     "15 in is standard; 16–16.5 in feels noticeably less cramped when you're typing or on calls."
+    ],
+    [
+     "Noise",
+     "Claimed figures run from 35 to 54 dB. Brushless motors are usually quieter."
+    ],
+    [
+     "Control",
+     "A remote or app lets you change speed without bending down mid-call."
+    ],
+    [
+     "Warranty",
+     "Most pads carry 1 year; TRAILVIBER offers 3 and MERACH 2."
+    ]
+   ],
+   "faq": [
+    [
+     "Can you jog on a walking pad?",
+     "Some reach 6–6.2 mph, but their 36–41 in belts are short for jogging strides. Treat them as walking machines."
+    ],
+    [
+     "Do walking pads work on carpet?",
+     "They work best on a hard floor or a firm mat; carpet can block airflow to the motor and let the deck flex."
+    ],
+    [
+     "How many steps can I get at a desk?",
+     "At 1.5–2.5 mph, an hour of desk walking is roughly 4,000–6,000 steps for most people."
+    ]
+   ]
+  },
+  {
+   "slug": "best-incline-walking-pad",
+   "title": "Best Incline Walking Pad & Treadmill (2026)",
+   "h1": "The best incline walking pads and treadmills in 2026",
+   "description": "Incline treadmills and walking pads ranked on how steep they go, whether the incline is motorized, sturdiness and value.",
+   "rank_by": "incline",
+   "filter": "incline_max_pct>=10",
+   "limit": 5,
+   "intro": [
+    "Walking uphill raises effort far more than walking faster, without the impact of running. That's why incline pads are the fastest-growing corner of the treadmill market.",
+    "This ranking rewards steep and motorized incline first, then sturdiness, motor and value."
+   ],
+   "criteria": [
+    [
+     "Motorized vs manual",
+     "Motorized incline changes with a button mid-walk. Manual incline uses blocks or pins — fine if you walk at one setting."
+    ],
+    [
+     "How steep",
+     "10–12% is a solid hill; 15–16% is very steep. Degrees aren't percent: 4° is about 7% and 6° about 10.5%."
+    ],
+    [
+     "Stability",
+     "Steep incline puts more load on the frame. Look for a high weight rating and handrails if balance is a concern."
+    ],
+    [
+     "Belt room",
+     "Your stride lengthens uphill, so a longer belt helps more than on flat ground."
+    ]
+   ],
+   "faq": [
+    [
+     "Is 12% incline enough?",
+     "For most people, yes. Walking at 3 mph and 12% is a demanding workout."
+    ],
+    [
+     "Does incline walking burn more calories?",
+     "Yes — effort rises sharply with grade at the same speed, which is why brands quote big calorie gains. The exact figure depends on your weight and pace."
+    ]
+   ]
+  },
+  {
+   "slug": "best-treadmill-for-running",
+   "title": "Best Treadmill for Running at Home (2026)",
+   "h1": "The best treadmills for running at home in 2026",
+   "description": "Home treadmills that can really handle running, ranked on motor and speed, belt room, sturdiness and value.",
+   "rank_by": "running",
+   "filter": "tag:running",
+   "limit": 5,
+   "intro": [
+    "Running puts far more stress on a treadmill than walking: you need speed, a long belt, cushioning and a frame that doesn't shake.",
+    "This ranking weighs motor and speed and belt room most, then sturdiness and value."
+   ],
+   "criteria": [
+    [
+     "Belt length",
+     "55 in is the practical minimum for running; 60 in if you're tall or do sprints."
+    ],
+    [
+     "Top speed",
+     "10 mph covers almost everyone; 12 mph matters for interval sprints."
+    ],
+    [
+     "Weight and stability",
+     "Heavier frames shake less at speed. Running treadmills weigh 160–220 lb."
+    ],
+    [
+     "Delivery",
+     "Plan for help or paid assembly — these arrive in 250–300 lb boxes."
+    ]
+   ],
+   "faq": [
+    [
+     "Can I run on a folding treadmill?",
+     "Yes, if the belt and motor are sized for it. NordicTrack and ProForm's folding models are built for running."
+    ],
+    [
+     "Do I need iFIT?",
+     "No. The machines work without it; the membership adds trainer-led workouts that auto-adjust speed and incline."
+    ]
+   ]
+  },
+  {
+   "slug": "best-treadmill-for-heavy-people",
+   "title": "Best Treadmill for Heavy People (2026)",
+   "h1": "The best treadmills for heavy people in 2026",
+   "description": "Treadmills and walking pads with high weight ratings, ranked on sturdiness, belt room, motor and value.",
+   "rank_by": "heavy",
+   "filter": "max_user_lb>=300",
+   "limit": 5,
+   "intro": [
+    "Weight ratings on Amazon are claims, and some are optimistic. We favor models with sturdy frames, longer warranties and owners near the limit reporting good results.",
+    "Every model here is rated for at least 300 lb; buy one rated comfortably above your weight."
+   ],
+   "criteria": [
+    [
+     "Headroom",
+     "Choose a model rated 15–20% above your weight for a longer motor and belt life."
+    ],
+    [
+     "Sustained vs peak",
+     "Some brands quote a peak figure. MERACH, for example, rates its W60 at 330 lb sustained and 400 lb peak."
+    ],
+    [
+     "Deck width",
+     "A 16–20 in belt gives more lateral room and confidence."
+    ],
+    [
+     "Warranty",
+     "A 2–3 year warranty (TRAILVIBER, MERACH) or a 10-year frame warranty (NordicTrack, ProForm) is a good sign."
+    ]
+   ],
+   "faq": [
+    [
+     "What's the highest weight rating here?",
+     "The TRAILVIBER X01 claims 450 lb, followed by the MERACH W60 at 400 lb peak and the CURSOR SF20 at 400 lb."
+    ],
+    [
+     "Are walking pads OK for heavier users?",
+     "Yes, if the rating has headroom and you walk rather than jog. Pads with reinforced steel frames and double decks handle it best."
+    ]
+   ]
+  },
+  {
+   "slug": "best-treadmill-under-300",
+   "title": "Best Treadmill Under $300 (2026)",
+   "h1": "The best treadmills and walking pads under $300 in 2026",
+   "description": "The best cheap treadmills and walking pads, ranked on value, sturdiness, belt room, motor and incline.",
+   "rank_by": "value",
+   "filter": "price<=300",
+   "limit": 5,
+   "intro": [
+    "Under $300 you're shopping walking pads, not running treadmills — but there's real quality at this price if you pick carefully.",
+    "This ranking puts value first, then sturdiness, belt room, motor and incline. Price ranges were checked on Amazon; click through for today's price."
+   ],
+   "criteria": [
+    [
+     "Track record",
+     "Budget pads vary a lot in durability. Weigh the share of one-star reviews, not just the average."
+    ],
+    [
+     "Seller",
+     "Pads shipped and sold by Amazon are easiest to return if an early unit fails."
+    ],
+    [
+     "Incline",
+     "Several pads under $300 now offer 10–16% incline; a few are motorized."
+    ],
+    [
+     "Specs that don't add up",
+     "Some listings claim one belt size or weight limit in the title and another in the bullets. We use the conservative figure."
+    ]
+   ],
+   "faq": [
+    [
+     "Is a cheap walking pad worth it?",
+     "For walking, yes — most daily desk walkers are well served under $300. Expect a 1-year warranty and keep the box during the return window."
+    ],
+    [
+     "What do you give up under $300?",
+     "Running speed, belt length, long warranties and, on most models, motorized incline."
+    ]
+   ]
+  }
+ ]
+}
