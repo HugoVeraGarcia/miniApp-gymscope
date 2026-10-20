@@ -310,7 +310,7 @@ def header(active: str) -> str:
         f'{" aria-current=page" if active == h else ""}>{t}'
         f'{"<span class=cmp-count data-cmp-count hidden>0</span>" if h == "/compare/" else ""}</a>'
         for h, t in NAV)
-    return f"""<div class="topbar">Reader-supported: we may earn a commission when you buy through our links. <a href="/affiliate-disclosure/">Learn more</a></div>
+    return f"""<aside class="topbar" aria-label="Affiliate disclosure">Reader-supported: we may earn a commission when you buy through our links. <a href="/affiliate-disclosure/">Learn more</a></aside>
 <header class="site-header">
   <div class="wrap site-header__in">
     <a class="logo" href="/" aria-label="{E(SITE['name'])} home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 23h19l5-3"/><circle cx="7" cy="23" r="2.2"/><circle cx="21" cy="23" r="2.2"/><path d="M23 20 20 7h4"/></svg></span><span class="logo__txt">{SITE['logo'][0]}<b>{SITE['logo'][1]}</b></span></a>
@@ -330,9 +330,9 @@ def footer() -> str:
         <a class="logo logo--light" href="/"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 23h19l5-3"/><circle cx="7" cy="23" r="2.2"/><circle cx="21" cy="23" r="2.2"/><path d="M23 20 20 7h4"/></svg></span><span class="logo__txt">{SITE['logo'][0]}<b>{SITE['logo'][1]}</b></span></a>
         <p class="muted">{E(SITE["footer_blurb"])}</p>
       </div>
-      <div><h3>Categories</h3><ul>{cats}</ul></div>
-      <div><h3>Guides</h3><ul>{guides}</ul></div>
-      <div><h3>Site</h3><ul><li><a href="/compare/">Compare treadmills</a></li><li><a href="/vs/">Head-to-head comparisons</a></li><li><a href="/fit-finder/">Fit finder</a></li><li><a href="/how-we-rate/">How we rate</a></li><li><a href="/about/">About &amp; contact</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/privacy/">Privacy &amp; cookies</a></li></ul></div>
+      <div><h2>Categories</h2><ul>{cats}</ul></div>
+      <div><h2>Guides</h2><ul>{guides}</ul></div>
+      <div><h2>Site</h2><ul><li><a href="/compare/">Compare treadmills</a></li><li><a href="/vs/">Head-to-head comparisons</a></li><li><a href="/fit-finder/">Fit finder</a></li><li><a href="/how-we-rate/">How we rate</a></li><li><a href="/about/">About &amp; contact</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/privacy/">Privacy &amp; cookies</a></li></ul></div>
     </div>
     <div class="site-footer__legal">
       <p><strong>Affiliate disclosure:</strong> {E(SITE['name'])} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate we earn from qualifying purchases, at no extra cost to you.</p>
@@ -454,9 +454,9 @@ def cards_grid(items, ranked=False, attrs="") -> str:
 
 
 def disclosure_box() -> str:
-    return ('<aside class="disclosure"><strong>Heads-up:</strong> links to Amazon on this page are affiliate links. '
+    return ('<div class="disclosure" role="note"><strong>Heads-up:</strong> links to Amazon on this page are affiliate links. '
             'If you buy through them we may earn a commission, at no extra cost to you. It never changes our scores. '
-            '<a href="/affiliate-disclosure/">How this works</a></aside>')
+            '<a href="/affiliate-disclosure/">How this works</a></div>')
 
 
 def breadcrumbs(items) -> tuple[str, dict]:
@@ -574,7 +574,7 @@ def build_all_models():
     crumbs, ld = breadcrumbs([("/", "Home"), (None, "All treadmills")])
     body = f"""<section class="page-head"><div class="wrap">{crumbs}<h1>All treadmills &amp; walking pads</h1>
 <p class="lead">Every model we've reviewed, with the specs that matter. Add up to four to the comparator with the + button.</p></div></section>
-<section class="section section--flush"><div class="wrap">{sort_bar(len(items))}{cards_grid(items, attrs='data-sortable')}{disclosure_box()}</div></section>"""
+<section class="section section--flush"><div class="wrap"><h2 class="sr-only">All models</h2>{sort_bar(len(items))}{cards_grid(items, attrs='data-sortable')}{disclosure_box()}</div></section>"""
     page("/treadmills/", "All treadmills & walking pads: specs & reviews",
          "Browse every home treadmill and walking pad we cover with motor, top speed, incline, belt size, weight capacity, Amazon rating and editor scores.",
          body, active="/treadmills/", jsonld=[ld])
@@ -802,7 +802,7 @@ def build_categories():
                     '<a class="btn btn--dark" href="/treadmills/">See all treadmills</a></div>')
         others = "".join(f'<a class="chip" href="/category/{o["slug"]}/">{E(o["short"])}</a>' for o in SITE["categories"] if o["slug"] != c["slug"])
         body = f"""<section class="page-head"><div class="wrap">{crumbs}<p class="eyebrow">Category</p><h1>{E(c['h1'])}</h1><p class="lead">{E(c['intro'])}</p>{guide_html}</div></section>
-<section class="section section--flush"><div class="wrap">{grid}<div class="chips-row"><span>Other categories:</span>{others}</div>{disclosure_box()}</div></section>"""
+<section class="section section--flush"><div class="wrap"><h2 class="sr-only">Models in this category</h2>{grid}<div class="chips-row"><span>Other categories:</span>{others}</div>{disclosure_box()}</div></section>"""
         item_ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": SITE["base_url"].rstrip("/") + url_of(p), "name": display_name(p)} for i, p in enumerate(items)]}
         page(f"/category/{c['slug']}/", f"{c['h1']} ({SITE['year']})",
@@ -812,7 +812,7 @@ def build_categories():
 
 def build_guides():
     tiles = "".join(
-        f'<a class="guide-tile" href="/guides/{g["slug"]}/"><span class="eyebrow">Buying guide · {SITE["year"]}</span><h3>{E(g["title"])}</h3><p>{E(g["description"])}</p><span class="link-arrow">Read the guide<svg class="ico"><use href="#i-arrow"/></svg></span></a>'
+        f'<a class="guide-tile" href="/guides/{g["slug"]}/"><span class="eyebrow">Buying guide · {SITE["year"]}</span><h2>{E(g["title"])}</h2><p>{E(g["description"])}</p><span class="link-arrow">Read the guide<svg class="ico"><use href="#i-arrow"/></svg></span></a>'
         for g in SITE["guides"])
     crumbs, ld = breadcrumbs([("/", "Home"), (None, "Buying guides")])
     page("/guides/", "Treadmill buying guides",
@@ -864,7 +864,7 @@ def build_guides():
         body = f"""<section class="page-head page-head--guide"><div class="wrap narrow">{crumbs}<p class="eyebrow">Buying guide · Updated {nice_date(DB['_meta']['updated'])}</p><h1>{E(g['h1'])}</h1><div class="prose">{intro}</div>{growing}</div></section>
 <section class="section section--flush"><div class="wrap narrow">
   {disclosure_box()}
-  <div class="quicktable"><h2>Quick picks</h2><div class="table-scroll"><table><thead><tr><th></th><th>Model</th><th>Top speed</th><th>Incline</th><th>Score</th><th></th></tr></thead><tbody>{quick_rows}</tbody></table></div>
+  <div class="quicktable"><h2>Quick picks</h2><div class="table-scroll"><table><thead><tr><th><span class="sr-only">Rank</span></th><th>Model</th><th>Top speed</th><th>Incline</th><th>Score</th><th><span class="sr-only">Amazon link</span></th></tr></thead><tbody>{quick_rows}</tbody></table></div>
   {f'<a class="link-arrow" href="/compare/#ids={ids}">Compare the picks side by side<svg class="ico"><use href="#i-arrow"/></svg></a>' if len(picks) > 1 else ''}</div>
   <div class="picks">{picks_html}</div>
   {also_html}
@@ -900,7 +900,7 @@ def build_compare():
     </div>
     <div data-cmp-result></div>
     {('<div class="vs-strip"><h2>Popular head-to-heads</h2><div class="vs-chips">' + "".join(f'<a class="vs-chip" href="{vs_url(m)}"><span>{E(short_name(BY_ID[m["a"]]))}</span><b>vs</b><span>{E(short_name(BY_ID[m["b"]]))}</span></a>' for m in MATCHUPS) + '</div></div>') if MATCHUPS else ''}
-    <noscript><div class="table-scroll"><table class="cmp-static"><thead><tr><th></th>{head}</tr></thead><tbody>{rows}</tbody></table></div></noscript>
+    <noscript><div class="table-scroll"><table class="cmp-static"><thead><tr><th><span class="sr-only">Spec</span></th>{head}</tr></thead><tbody>{rows}</tbody></table></div></noscript>
     {disclosure_box()}
   </div>
 </section>"""
@@ -999,7 +999,7 @@ def build_vs():
     page("/vs/", "Treadmill head-to-head comparisons",
          "Side-by-side comparisons of popular treadmills and walking pads: specs, editor scores and which one to buy.",
          f'<section class="page-head page-head--dark"><div class="wrap">{crumbs}<p class="eyebrow eyebrow--volt">Head to head</p><h1>Treadmill vs treadmill</h1><p class="lead">The matchups shoppers ask about most, compared spec by spec with a clear recommendation. Want a different pair? Build it in the <a href="/compare/" style="color:#fff">comparator</a>.</p></div></section>'
-         f'<section class="section section--flush"><div class="wrap"><div class="vs-tiles">{"".join(tile(m) for m in MATCHUPS)}</div></div></section>',
+         f'<section class="section section--flush"><div class="wrap"><h2 class="sr-only">All head-to-head comparisons</h2><div class="vs-tiles">{"".join(tile(m) for m in MATCHUPS)}</div></div></section>',
          active="/compare/", jsonld=[ld])
 
     for m in MATCHUPS:
@@ -1103,7 +1103,7 @@ def build_fit_finder():
 <section class="section section--flush ff" data-ff>
   <div class="wrap ff-grid">
     <form class="ff-form" data-ff-form onsubmit="return false">{form}</form>
-    <div class="ff-results"><div class="ff-summary" data-ff-summary aria-live="polite"></div><div data-ff-list></div>
+    <div class="ff-results"><div class="ff-summary" data-ff-summary aria-live="polite"></div><h2 class="sr-only">Results</h2><div data-ff-list></div>
     <noscript><p class="note">The fit finder needs JavaScript. You can still compare every model in the <a href="/compare/">comparator</a>.</p></noscript></div>
   </div>
   <div class="wrap">

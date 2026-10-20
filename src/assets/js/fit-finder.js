@@ -123,7 +123,7 @@
       list.innerHTML = results.map(function (r) {
         var p = r.p;
         return '<article class="ff-card ff-card--' + r.st + (focus.indexOf(p.id) > -1 ? " is-focus" : "") + '">' +
-          '<a class="ff-card__img" href="' + esc(p.url) + '"><img src="' + esc(p.img) + '" alt="" loading="lazy"></a>' +
+          '<a class="ff-card__img" tabindex="-1" aria-hidden="true" href="' + esc(p.url) + '"><img src="' + esc(p.img) + '" alt="" loading="lazy"></a>' +
           '<div class="ff-card__body"><div class="ff-card__top"><span class="ff-status">' + labels[r.st] + '</span><span class="score-pill" title="Editor score">' + p.score + "</span></div>" +
           '<h3><a href="' + esc(p.url) + '">' + esc(p.name) + "</a></h3>" +
           '<ul class="ff-checks">' + r.checks.map(function (c) { return '<li class="is-' + c.st + '">' + esc(c.t) + "</li>"; }).join("") + "</ul>" +
